@@ -1,15 +1,13 @@
 from django.shortcuts import render
+from . import models
 
 def homepage(request):
     return render(request=request, template_name='home.html')
 
 def temp(request):
+    name = models.Person.objects.all()
+    
     context = {
-        'key' : 'value',
-        'name' : 'John',
-        'person' : {
-            'name' : 'John',
-            'age' : '26'
-        }
+        'peaple' : name,
     }
     return render(request=request, template_name='temp.html', context=context)

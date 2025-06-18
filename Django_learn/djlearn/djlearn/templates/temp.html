@@ -5,9 +5,12 @@
     <title>عنوان صفحه</title>
   </head>
   <body>
-    <h1>یک است</h1>
-    
-    <p>name is: {{person.age}}</p>
+    <ul>
+        <li> name age </li>
+        {% for person in peaple %}
+        <li> {{person.name}} || {{person.age}} </li>
+        {% endfor %}
+    </ul>
     
   </body>
 </html>
